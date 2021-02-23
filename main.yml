@@ -5,14 +5,14 @@
   tasks:
 
   - name: Install Part_1
-    import_tasks:
-      name: part-1.yml
+    import_tasks: part-1.yml
+      
     when: "'kibana_server' in inventory_hostname"
 
 
   - name: Install Part_2
-    import_tasks:
-      name: part-1.yml
+    import_tasks: part-2.yml
+    
     when: "'kibana_agent' in inventory_hostname"
 
   
