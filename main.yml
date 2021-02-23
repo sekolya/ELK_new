@@ -7,12 +7,12 @@
   - name: Install Part_1
     import_tasks: part-1.yml
       
-    when: "{{ '54.144.156.177' | ipaddr }}"
+    when: "ansible_default_ipv4.address == '54.144.156.177'"
 
 
   - name: Install Part_2
     import_tasks: part-2.yml
     
-    when: "{{ '52.5.223.46' | ipaddr }}"
+    when: "ansible_default_ipv4.address == '52.5.223.46'"
 
   
