@@ -1,0 +1,11 @@
+- name: Disable SELinux
+    selinux:
+      state: disabled
+
+  - name: Elk_Stack Repo
+    import_role:
+      name: elk_stack
+
+  - name: Install Filebeat
+    import_role:
+      name: filebeat

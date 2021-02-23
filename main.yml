@@ -1,0 +1,18 @@
+- hosts: all
+  become: yes
+  become_method: sudo
+  user: centos
+  tasks:
+
+  - name: Install Part_1
+    import_file:
+      name: part-1.yml
+    when: "'kibana_server' in inventory_hostname"
+
+
+  - name: Install Part_2
+    import_file:
+      name: part-1.yml
+    when: "'kibana_agent' in inventory_hostname"
+
+  
