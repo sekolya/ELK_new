@@ -7,12 +7,12 @@
   - name: Install Part_1
     import_tasks: part-1.yml
       
-    when: {{ '54.144.156.177' | ipaddr }}
+    when: "{{ '54.144.156.177' | ipaddr }}"
 
 
   - name: Install Part_2
     import_tasks: part-2.yml
     
-    when: {{ '52.5.223.46' | ipaddr }}
+    when: "{{ '52.5.223.46' | ipaddr }}"
 
   
