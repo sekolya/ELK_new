@@ -5,14 +5,12 @@
   tasks:
 
   - name: Install Part_1
-    ansible.builtin.include_tasks: part_1.yml
-      
-    when: "ansible_default_ipv4.address == '54.144.156.177'"
+    include_tasks: part_1.yml
+    when: "'ELK-Kibana' in inventory_hostname"
 
 
   - name: Install Part_2
-    ansible.builtin.include_tasks: part_2.yml
-    
-    when: "ansible_default_ipv4.address == '52.5.223.46'"
+    include_tasks: part_2.yml
+    when: "'ELK-Remote' in inventory_hostname"
 
   
