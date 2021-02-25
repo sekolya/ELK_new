@@ -1,6 +1,6 @@
-- name: Disable SELinux
-    selinux:
-      state: disabled
+# - name: Disable SELinux
+#     selinux:
+#       state: disabled
 
   - name: Elk_Stack Repo
     import_role:
